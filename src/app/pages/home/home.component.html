@@ -1,3 +1,10 @@
-<p>home works!</p>
-<a routerLink="admin-users">Admin Users</a>
-<router-outlet></router-outlet>
+<div class="admin__container">
+  <app-sidebar
+    [toggleSidebar]="toggleSidebar"
+    [isCollapsed]="isCollapsed"
+  ></app-sidebar>
+  <div class="content">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>

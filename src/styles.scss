@@ -2,3 +2,13 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap.scss";
+@import "./assets/iconfont.scss";
+
+.logo {
+  cursor: pointer;
+}
+
+.app-icon{
+  width: 40px;
+  height: 40px;
+}
