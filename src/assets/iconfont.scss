@@ -1,25 +1,27 @@
 @font-face {
-  font-family: 'iconfont';
-  src:  url('fonts/iconfont.eot?v5ryud');
-  src:  url('fonts/iconfont.eot?v5ryud#iefix') format('embedded-opentype'),
-    url('fonts/iconfont.ttf?v5ryud') format('truetype'),
-    url('fonts/iconfont.woff?v5ryud') format('woff'),
-    url('fonts/iconfont.svg?v5ryud#iconfont') format('svg');
+  font-family: "iconfont";
+  src: url("fonts/iconfont.eot?v5ryud");
+  src: url("fonts/iconfont.eot?v5ryud#iefix") format("embedded-opentype"),
+    url("fonts/iconfont.ttf?v5ryud") format("truetype"),
+    url("fonts/iconfont.woff?v5ryud") format("woff"),
+    url("fonts/iconfont.svg?v5ryud#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="a-icon"], [class*=" a-icon"] {
+[class^="a-icon"],
+[class*=" a-icon"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'iconfont' !important;
+  font-family: "iconfont" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  display: flex;
+  align-items: center;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

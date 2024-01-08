@@ -1,38 +1,52 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Toogle</a>
+    <span class="navbar-brand" (click)="toggleSidebar()">
+      <i class="a-icon8083 iconx2" *ngIf="isCollapsed"></i>
+      <i class="a-icon8084 iconx2" *ngIf="!isCollapsed"></i>
+    </span>
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
+      aria-controls="navbarContent"
+      [attr.aria-expanded]="!collapsed"
       aria-label="Toggle navigation"
+      (click)="collapsed = !collapsed"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="ms-auto d-flex align-items-center">
-        <span class="fw-bold">John doe</span>
-        <div class="dropdown">
-          <button
-            class="btn"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
+
+    <div
+      class="navbar-collapse"
+      [class.collapse]="collapsed"
+      id="navbarContent"
+    >
+      <ul class="navbar-nav ms-auto">
+        <li
+          class="nav-item"
+          ngbDropdown
+          display="dynamic"
+          placement="bottom-end"
+        >
+          <a
+            class="nav-link"
+            tabindex="0"
+            ngbDropdownToggle
+            id="navbarDropdown3"
+            role="button"
           >
-            <span class="a-icon8032 app-icon"></span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            John MF Doe
+          </a>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="navbarDropdown3"
+            class="dropdown-menu"
+          >
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
+              >Cerrar Sesión</a
+            >
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

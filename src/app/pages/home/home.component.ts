@@ -10,9 +10,9 @@ import { HeaderComponent } from '../../components/shared/header/header.component
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  isCollapsed = false;
+  isCollapsed = true;
 
-  toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
+  toggleSidebar(colapseNewState: boolean) {
+    this.isCollapsed = colapseNewState;
   }
 }

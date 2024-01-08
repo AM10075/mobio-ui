@@ -7,4 +7,16 @@
     width="50px"
     height="50px"
   />
+  <ul class="sidebar__navigation p-0 list">
+    <li
+      class="sidebar__item"
+      [ngClass]="{ 'p-0': isCollapsed, 'p-2': !isCollapsed }"
+    >
+      <span class="sidebar__icon">
+        <i class="a-icon8032 iconx2"></i>
+      </span>
+
+      <span href="" class="sidebar__link link fw-bold">Seccion 1</span>
+    </li>
+  </ul>
 </nav>
