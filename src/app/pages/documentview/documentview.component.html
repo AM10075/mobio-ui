@@ -1,0 +1,17 @@
+<div class="admin__container">
+  <app-sidebar
+    [isCollapsed]="isCollapsed"
+    (event)="toggleSidebar($event)"
+  ></app-sidebar>
+  <div class="content">
+    <app-header
+      [isCollapsed]="isCollapsed"
+      (event)="toggleSidebar($event)"
+    ></app-header>
+    <router-outlet></router-outlet>
+    <h1 class="text-center">Document View</h1>
+  </div>
+</div>
+
+
+

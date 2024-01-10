@@ -11,5 +11,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'documentview',
+    loadChildren: () =>
+      import('./pages/documentview/documentview.module').then((m) => m.DocumentviewModule),
+  },
   { path: '**', component: NotFoundComponent },
+
 ];
